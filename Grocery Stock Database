@@ -1,0 +1,22 @@
+CREATE TABLE Stock (SKU INTEGER PRIMARY KEY, Description TEXT, Section TEXT, Price INTEGER, On_Hand INTEGER, Warehouse INTEGER);
+
+INSERT INTO Stock VALUES 
+(1, "peaches", "produce", 2.99, 50, 500),
+(2, "banana", "produce", 0.99, 95, 950),
+(3, "qtips", "hygiene", 2.99, 55, 550),
+(4, "beans", "bulk", 0.99, 50, 500),
+(5, "turkey burgers", "meat", 4.99, 65, 650),
+(6, "salsa", "fresh", 3.25, 43, 430),
+(7, "hummus", "fresh", 2.99, 35, 350),
+(8, "cocoa butter", "hygiene", 2.99, 50, 500),
+(9, "chicken nuggets", "meat", 4.99, 75, 750),
+(10, "peas", "frozen", 0.99, 25, 250),
+(11, "smoothie berries", "frozen", 2.99, 33, 330),
+(12, "granola", "bulk", 1.99, 80, 800),
+(13, "vitamin D", "health", 8.99, 29, 290),
+(14, "active dry yeast", "baking", 2.99, 26, 260),
+(15, "popcorn", "snacks", 1.99, 47, 470);
+
+select * from Stock order by price;
+
+select avg(price) from Stock where section='produce';
