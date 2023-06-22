@@ -1,4 +1,11 @@
-CREATE TABLE Stock (SKU INTEGER PRIMARY KEY, Description TEXT, Section TEXT, Price INTEGER, On_Hand INTEGER, Warehouse INTEGER);
+CREATE TABLE Stock (
+  SKU           INTEGER PRIMARY KEY, 
+  Description   TEXT, 
+  Section       TEXT, 
+  Price         INTEGER, 
+  On_Hand       INTEGER, 
+  Warehouse     INTEGER
+);
 
 INSERT INTO Stock VALUES 
 (1, "peaches", "produce", 2.99, 50, 500),
