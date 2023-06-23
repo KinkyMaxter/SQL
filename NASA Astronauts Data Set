@@ -391,4 +391,4 @@ What interesting ways are there to filter the data (using AND/OR)?*/
 
 SELECT * FROM Astronauts;
 
-SELECT Name, Status, Birth_Date FROM Astronauts WHERE Status="Management" OR Status="Active";
+SELECT Name, Status, Birth_Date FROM Astronauts WHERE Status IN ("Active","Management");
