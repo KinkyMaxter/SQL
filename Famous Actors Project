@@ -1,0 +1,61 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE Actors(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Full_Name TEXT);
+
+INSERT INTO Actors (Full_Name) VALUES
+    ('Tom Hanks'),
+    ('Rita Wilson'),
+    ('Ryan Reynolds'),
+    ('Blake Lively');
+
+CREATE TABLE Spouses(
+    Spouse1 INTEGER,
+    Spouse2 INTEGER);
+
+INSERT INTO Spouses VALUES
+    (1,2),
+    (3,4);
+
+CREATE TABLE Films(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT);
+
+INSERT INTO Films (Name) Values
+    ('Volunteers'),
+    ('Sleepless in Seattle'),
+    ('Green Lantern'),
+    ('Deadpool'),
+    ('Simple Favor');
+
+CREATE TABLE Stars(
+    Film INTEGER,
+    Star INTEGER);
+
+INSERT INTO Stars VALUES
+    (1,1),
+    (1,2),
+    (2,1),
+    (2,2),
+    (3,3),
+    (3,4),
+    (4,3),
+    (5,4);
+
+SELECT * FROM Actors;
+
+SELECT * FROM Films;
+
+SELECT A.Full_Name, B.Full_Name FROM Spouses 
+    JOIN Actors A
+    ON Spouse1=A.id
+    JOIN Actors B
+    ON Spouse2=B.id;
+
+SELECT Films.Name, Actors.Full_Name FROM Stars
+    JOIN Films
+    ON Film=Films.id
+    JOIN Actors
+    ON Star=Actors.id;
+
