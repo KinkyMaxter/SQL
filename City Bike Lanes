@@ -1,4 +1,4 @@
-#Here, I continued practising use of CTE's as well as learning how and when to use CASE queries
+#Here, I continued practising use of CTE's as well as learning how and when to use Window Function queries
 
 CREATE TABLE BIT_DB.CityBikeLanes (
     id integer             primary key,
